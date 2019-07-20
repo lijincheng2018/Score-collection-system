@@ -442,8 +442,8 @@ if (mysql_query($sql, $conn)) {
 					require './mail/src/Exception.php'; 
 					require './mail/src/PHPMailer.php'; 
 					require './mail/src/SMTP.php'; 
-                    if($_SESSION['sex']==0) $user_mail='root@ljcljc.cn';
-                    else $user_mail='1470472271@qq.com';
+                    if($_SESSION['sex']==0) $user_mail='管理员邮箱1';
+                    else $user_mail='管理员邮箱2';
 						$mail = new PHPMailer(true); 
 						try {
 							$mail->CharSet ="UTF-8"; 
@@ -451,13 +451,13 @@ if (mysql_query($sql, $conn)) {
 							$mail->isSMTP(); 
 							$mail->Host = 'smtp.qq.com'; 
 							$mail->SMTPAuth = true;
-							$mail->Username = '2722793066';
-							$mail->Password = 'wieppuhckxsddfhh'; 
+							$mail->Username = '';//你的邮箱
+							$mail->Password = ''; //你的邮箱授权码
 							$mail->SMTPSecure = 'ssl'; 
 							$mail->Port = 465;
-							$mail->setFrom('zk@ljcljc.cn', '中考成绩收集系统-系统信息'); 
+							$mail->setFrom('你的邮箱', '中考成绩收集系统-系统信息'); 
 							$mail->addAddress($user_mail, 'admin'); 
-							$mail->addReplyTo('zk@ljcljc.cn', 'info');
+							$mail->addReplyTo('你的邮箱', 'info');
 							$mail->isHTML(true); 
 							$mail->Subject = $confname.'成绩上报成功！';
 							$mail->Body    = '<h1>尊敬的管理员<font color="red" >李锦成</font>，'.$confname.'成绩上报成功！</h1>上报成功时间为：'.date('Y-m-d H:i:s'); 
@@ -598,13 +598,13 @@ try {
     $mail_1->isSMTP(); 
     $mail_1->Host = 'smtp.qq.com'; 
     $mail_1->SMTPAuth = true;
-    $mail_1->Username = '2722793066'; 
-    $mail_1->Password = 'wieppuhckxsddfhh'; 
+    $mail_1->Username = ''; //你的邮箱
+    $mail_1->Password = ''; //你的邮箱授权码
     $mail_1->SMTPSecure = 'ssl';
     $mail_1->Port = 465; 
-    $mail_1->setFrom('zk@ljcljc.cn', '中考成绩收集系统-系统信息'); 
+    $mail_1->setFrom('你的邮箱', '中考成绩收集系统-系统信息'); 
     $mail_1->addAddress($email, $_SESSION['name']);
-    $mail_1->addReplyTo('zk@ljcljc.cn', 'info');
+    $mail_1->addReplyTo('你的邮箱', 'info');
     $mail_1->addAttachment('./public/img/'.$_SESSION['name'].'.'.$_SESSION['ext']);
     $mail_1->addAttachment('./img/zkcjsjxt_thanks.png');
     $mail_1->isHTML(true); 

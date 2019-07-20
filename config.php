@@ -1,5 +1,6 @@
 <?php
-$conn = @mysql_connect("localhost","root","axsz123456");
+$conn = @mysql_connect("localhost","username","password");
+//Username填写数据库的账号，Password填写数据库的密码
 if (!$conn){
     die("连接数据库失败：" . mysql_error());
 }
