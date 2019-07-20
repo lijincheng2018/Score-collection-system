@@ -1,4 +1,4 @@
-<img alt="中考成绩收集系统" src="./img/icon.png"></img>
+![ljczk](https://zk.ljcljc.cn/img/icon.png "中考成绩收集系统")  
 中考成绩收集系统<br>
 这个系统可以帮助老师们收集学生的中考成绩！<br>
 关于开发者<br>
